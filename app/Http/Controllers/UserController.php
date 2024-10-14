@@ -31,6 +31,11 @@ class UserController extends Controller
         return User::all();
     }
 
+    public function deleteUser(Request $rq)
+    {
+        return User::where('id', $rq->id)->delete();
+    }
+
 
 }
 
